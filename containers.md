@@ -46,6 +46,14 @@ BUILDAH
 
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/84621d83-2c9f-45ce-a79a-5835e443532a)
 
+containers do not have operating system
+---
+1) Containers have a base OS or they minimum system dependencies, This system dependencies are definictly required to form a logical isolation from one container to other container.
+2) If the logical isolation is not there, or minimum dependencies are not there they however you manage to run the application on that specific conttainer, A Hacker who is entering into your container typically get into all of the containers and compressize the security of the organization.
+3) /bin /sbin /etc /lib and etc these basic folders form a logical isolcation from one container to other container that means the container can not share these files and folders with other container, if these file and folders are sharing by the conatiner that me you are compresizing the security
+4) This files are folders are using from the kernel they are basically part of the container base image 
+
+
 
 
 
