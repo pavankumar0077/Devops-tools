@@ -55,35 +55,7 @@ containers do not have operating system
 3) /bin /sbin /etc /lib and etc these basic folders form a logical isolcation from one container to other container that means the container can not share these files and folders with other container, if these file and folders are sharing by the conatiner that me you are compresizing the security
 4) This files are folders are using from the kernel they are basically part of the container base image
 
-Docker file example
---
-FROM ubuntu: latest
-# Set the working directory in the image
-WORKDIR /app
 
-# Copy the files from the host file system to the image file system
-COPY./app
-
-# Install the necessary packages
-RUN apt-get update && apt-get install -y python3 python3-pip
-
-# Set environment variables
-ENV NAME World
-# Run a command to start the application
-CMD ["python3", "app.py"]
-
-![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/2014b29c-e509-47d1-9cf7-a48a4bb70ec8)
-
-Push images to registry docker hub
---
-
-```
-docker login
-
-docker push pavankumar0077/my-app:latest
-
-username / app-name : tag 
-```
 
 
 
