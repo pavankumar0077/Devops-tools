@@ -1,11 +1,15 @@
 Docker
 --
+```
 Contanierization is a concept or technology and docker implements containerization.
+```
 
 Podman
 --
+```
 Podman is very good competiter for docker
-Podman addresses few complicated problems of docker, docker is centerized and it has only one docker deamon 
+Podman addresses few complicated problems of docker, docker is centerized and it has only one docker deamon
+```
 
 Next level tools after docker
 ---
@@ -72,14 +76,16 @@ docker push pavankumar0077/my-app:latest
 
 username / app-name : tag 
 ```
+```
 Entrypoint -- This commands serves as a start command, It cannot be changed, wheenever you are running container, they can not override this value in docker image where as CMD is something configurable.
 -- Main executable should be in Entrypoint and it is not changable
 -- If users wants to change parametes or modify existing paramentes then use CMD
 -- One thins must be same for example python3 is used to run any python script -- this should be entry in entrypoint
-
+```
 
 port mapping for docker images
 --
+```
 Ex: sudo docker run -p 8000:8000 -it <img-id>
 -p -- port 
 8000 -- left side is container port
@@ -96,7 +102,7 @@ security group
 inboud rules
 apply port 8000 to run the application -- custom tcp -- source everywhere or use only your ip
 
-
+```
 
 
 
