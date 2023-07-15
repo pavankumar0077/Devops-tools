@@ -32,19 +32,22 @@ conatiners will not responding
 
 issues
 --
+```
 --While creating docker images it will be created as layers it takes lots of storage on disk
 --  single point of failure
 -- and other issues
-
--- To avoid this issue -
+-- To avoid this issue - we use BUILDAH
+```
 
 BUILDAH
 ========
+```
 -- Buildah works with commands
 -- works very well with podman, scopio
 -- not need of dockerfiles 
 -- write a shall script to create images
 -- images can be docker image or any OCI image
+```
 
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/84621d83-2c9f-45ce-a79a-5835e443532a)
 
