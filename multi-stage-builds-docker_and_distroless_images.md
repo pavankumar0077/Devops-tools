@@ -49,7 +49,7 @@ DISTROLESS DOCKER IMAGE
 
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/a7686eab-01b0-4353-97af-7adc97a5ec59)
 
-
+```
 -- It is very lightweight images, that will have only runtime env
 -- It is very minimalistic image, that will hardly have any packages
 -- For example if we take python distroless image that have only python runtime 
@@ -57,5 +57,5 @@ DISTROLESS DOCKER IMAGE
 -- it will reduce docker image for very very less size like 10mb or 15mb
 -- Bigest advantage from distroless images are we get security, reduce the size and security with distroless images
 -- If we use distroless images 99% it will not expose for any security vulnerability
-
+```
 
