@@ -42,6 +42,36 @@ Difference Github & Docker hub
 Github is used to store source code, It is a VCS of our platform
 Dockerhub is version control platform for docker images 
 
+Docker file example
+--
+FROM ubuntu: latest
+# Set the working directory in the image
+WORKDIR /app
+
+# Copy the files from the host file system to the image file system
+COPY./app
+
+# Install the necessary packages
+RUN apt-get update && apt-get install -y python3 python3-pip
+
+# Set environment variables
+ENV NAME World
+# Run a command to start the application
+CMD ["python3", "app.py"]
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/2014b29c-e509-47d1-9cf7-a48a4bb70ec8)
+
+Push images to registry docker hub
+--
+
+```
+docker login
+
+docker push pavankumar0077/my-app:latest
+
+username / app-name : tag 
+```
+
 
 
 
