@@ -56,6 +56,7 @@ RUN apt-get update && apt-get install -y python3 python3-pip
 
 # Set environment variables
 ENV NAME World
+
 # Run a command to start the application
 CMD ["python3", "app.py"]
 
@@ -71,6 +72,35 @@ docker push pavankumar0077/my-app:latest
 
 username / app-name : tag 
 ```
+Entrypoint -- This commands serves as a start command, It cannot be changed, wheenever you are running container, they can not override this value in docker image where as CMD is something configurable.
+-- Main executable should be in Entrypoint and it is not changable
+-- If users wants to change parametes or modify existing paramentes then use CMD
+-- One thins must be same for example python3 is used to run any python script -- this should be entry in entrypoint
+
+
+port mapping for docker images
+--
+Ex: sudo docker run -p 8000:8000 -it <img-id>
+-p -- port 
+8000 -- left side is container port
+8000 -- right side is host port
+-it -- interactive mode  -- It show the logs and other stuff
+
+-- It may not be same as container port for host port
+Ex: 7688:8000
+
+Expose the port in AWS
+--
+instance settings 
+security group
+inboud rules
+apply port 8000 to run the application -- custom tcp -- source everywhere or use only your ip
+
+
+
+
+
+
 
 
 
