@@ -2,12 +2,12 @@
 ```Distroless```
 
 
-Multi Stage Buids
+Multi-Stage Buids
 --
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/c5116680-f5b5-4cce-af5d-d8b1dbe59db7)
 
-This is a simple docker files but here as we can use lof of things are not used to run the application like we are using 
-ubuntu which comes with lot of files and there is lot of unnecessary things they are not even used and it results in 
+This is a simple docker file but here as we can use lof of things that are not used to run the application like we are using 
+ubuntu which comes with a lot of files and there are lot of unnecessary things that are not even used and it results in 
 increase in the image size.
 
 To fix this issue Docker introduced Multi stage builds
@@ -58,4 +58,11 @@ DISTROLESS DOCKER IMAGE
 -- Bigest advantage from distroless images are we get security, reduce the size and security with distroless images
 -- If we use distroless images 99% it will not expose for any security vulnerability
 ```
+
+To get only atleast 5 images and old
+```
+sudo docker images | head -5
+sudo docker images | tail -5
+```
+
 
