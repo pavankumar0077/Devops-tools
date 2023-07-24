@@ -62,7 +62,92 @@ DISTROLESS DOCKER IMAGE
 To get only atleast 5 images and old
 ```
 sudo docker images | head -5
+
+
 sudo docker images | tail -5
 ```
 
+Multi-stage build
+--
+1) Stage 1 -- Here we don't have entrypoint or cmd
+-- This stage only for build steps
+-- It will only create the binary of the image
+   
+3) Stage 2
+-- special image called ```scratch``` (which is minimalistic distro-less image)
+   this is only for go lang.
+   If we need scratch kind of image then we have to install python or java on upto of it scratch or find
+   distro-less images of python and java
 
+Example fo normal dockerfile
+--
+```
+###########################################
+# BASE IMAGE
+###########################################
+
+FROM ubuntu AS build
+
+RUN apt-get update && apt-get install -y golang-go
+
+ENV GO111MODULE=off
+
+COPY . .
+
+RUN CGO_ENABLED=0 go build -o /app .
+
+ENTRYPOINT ["/app"]
+
+```
+
+NOTE: SIZE OF THE DOCKER IMAGE AFTER BULIDING IS 
+
+1) simplecal            latest           b38a0fb1b970   7 days ago      862MB
+
+
+Example of Multi-stage-build dockerfile for Go lang appliication
+--
+```
+###########################################
+# BASE IMAGE
+###########################################
+
+FROM ubuntu AS build
+
+RUN apt-get update && apt-get install -y golang-go
+
+ENV GO111MODULE=off
+
+COPY . .
+
+RUN CGO_ENABLED=0 go build -o /app .
+
+############################################
+# HERE STARTS THE MAGIC OF MULTI STAGE BUILD
+############################################
+
+FROM scratch
+
+# Copy the compiled binary from the build stage
+COPY --from=build /app /app
+
+# Set the entrypoint for the container to run the binary
+ENTRYPOINT ["/app"]
+
+```
+
+NOTE: SAME IMAGE WITH MULTI-STAGE BUILD AND THE SIZE IS
+1) simplecal-multistage                            latest           b6ef14e24e5e   3 minutes ago   1.83MB
+
+MULTI-STAGT-BUILD OR DISTRO LESS IMAGES ARE HAVE GOOD SECURITY AND LESS VILNERBILE 
+
+Find distroless images
+--
+Use this link 
+``` https://github.com/GoogleContainerTools/distroless ```
+Ex: instead of scratch use gcr.io/distroless/java17-debian11 for java 
+
+
+
+
+   
