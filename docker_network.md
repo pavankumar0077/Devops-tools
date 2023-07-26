@@ -80,31 +80,31 @@ Create a custom bridge network using a docker network command
 
 Create 2 containers and check whether they are pinging to each other
 --
-# sudo docker run -d --name login nginx:latest
+1) sudo docker run -d --name login nginx:latest
 # Enter inside a container sudo docker exec -it login /bin/bash
 install iputils-ping to ping from login to logout container
 ping is working
 
 # Create another container
-# sudo docker run -d --name logout nginx:latest
-# sudo docker inspect login
+1) sudo docker run -d --name logout nginx:latest
+2) sudo docker inspect login
 
 Create custom bridge network
 --
-# sudo docker network create secure-network (secure-network is network name)
-# sudo docker network ls (To check the networks)
-# sudo docker run -d --name finance --network=secure-network nginx:latest (To run with custom network)
-# sudo docker inspect finance
-# Now we are not able to ping this conatiner with other container, because it secure and isolated.
+1) sudo docker network create secure-network (secure-network is network name)
+2) sudo docker network ls (To check the networks)
+3) sudo docker run -d --name finance --network=secure-network nginx:latest (To run with custom network)
+4) sudo docker inspect finance
+5) Now we are not able to ping this conatiner with other container, because it secure and isolated.
 
 Create a conatiner with host network
 --
-# Host network is nothing but pc or vm or instancce network
-# Container will be created with no ip address if we inspect we don't get any ip address
-# It has same ip address as our system ip
+1) Host network is nothing but pc or vm or instancce network
+2) Container will be created with no ip address if we inspect we don't get any ip address
+3) It has same ip address as our system ip
 
-# sudo docker run -d --name host-demo --network=host nginx:latest
-# sudo docker inspect host-demo
+4) sudo docker run -d --name host-demo --network=host nginx:latest
+5) sudo docker inspect host-demo
 
 
 
