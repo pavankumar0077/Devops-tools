@@ -12,6 +12,11 @@ perform auditing.
 3) For suppose the container gone down, Because of container gone down, The log file will be deleted.
 4) Containers are ephemeral or shortlived in nature
 5) Container should not have a file system in nature
+
+PROBLEMS (When we don't use mounts and volumes)
+--
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/0c0e40da-57ad-4228-9453-3fd446848a65)
+
    
 # If container goes down, It used all of the resouces from host OS, but they are not a permanetly resources
 for this container, If container goes down they free up the resources from OS and killed now the user details
@@ -25,6 +30,13 @@ available.
 
 # Assume we have one application, The whole purpose of the application is to read some file which is not on our
 container, container reads the file that is provided from a CRON JOB on the HOST OS
+
+TO SOLVE THE ABOVE PROBLEMS DOCKER HAS COME UP WITH 2 THINGS
+BIND MOUNTS
+VOLUMES
+--
+
+
 
 
 
