@@ -75,6 +75,10 @@ volumes, we can create volume on any place like same HOST, External EC2 instance
    2.2) etc
 3) The above 1 and 2 commands are same just syntax is different.
 
+Commands
+--
+
+
  
 
 
