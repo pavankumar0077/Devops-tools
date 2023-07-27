@@ -12,3 +12,19 @@ perform auditing.
 3) For suppose the container gone down, Because of container gone down, The log file will be deleted.
 4) Containers are ephemeral or shortlived in nature
 5) Container should not have a file system in nature
+   
+# If container goes down, It used all of the resouces from host OS, but they are not a permanetly resources
+for this container, If container goes down they free up the resources from OS and killed now the user details
+or the logfile of the nginx is deleted.
+
+
+# Example we have 2 containers 1 is front-end and 2nd is backend, The backend container will producer or sends 
+html file to front end -- suddenly if backend container goes down then the generated files like today's yesterday's or 10 ago or one month ago files will be not available to front and front will only show which are
+available like today's yesterdays files. Since we are not using persistence storage the information will be 
+available.
+
+# Assume we have one application, The whole purpose of the application is to read some file which is not on our
+container, container reads the file that is provided from a CRON JOB on the HOST OS
+
+
+
