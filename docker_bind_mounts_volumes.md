@@ -77,10 +77,55 @@ volumes, we can create volume on any place like same HOST, External EC2 instance
 
 Commands
 --
-
-
- 
-
+1) List volumes
+```
+sudo docker volume ls
+```
+2) Create volume
+```
+sudo docker volume create pavan
+```
+3) Details of specific volume and where it is stored exactly
+```
+sudo docker volume inspect pavan
+```
+4) To delete a volume
+```
+sudo docker volume rm pavan
+```
+-- 1st stop the container and delete the container they only we can delete volume.
+5) To print 1st first docker images
+```
+sudo docker images | head -5
+```
+6) To mount volume to the container
+```
+sudo docker run -d --mount source=pavan,target=/app volumedemofile
+```
+We can add additional parameters as well by using ',' like mode="mount","RW=false", and etc
+```
+Here pavan -- volume created
+volumedemofile -- docker image
+```
+7) To check volume is mounted or not
+```
+sudo docker insepct <contianer-id>
+```
+Ex: 
+```
+"Mounts": [
+            {
+                "Type": "volume",
+                "Name": "pavan",
+                "Source": "/var/lib/docker/volumes/pavan/_data",
+                "Destination": "/app",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+```
 
 
 
