@@ -34,7 +34,10 @@ load balancer basically says that instead of 1 container there are 2 or many and
 by this machanism load balancer which supports your autoscaling**
 _
 
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/957cdd8e-d780-414b-bc64-741bc7f4bf1b)
+
+4) **Simple platform** -- Bydefault docker does not support any of the enterpise level application support (Load balancer, firewall, autoscale, auto healing, api gateways -- not supported in docker) by default it will not enterpise level applicaiton support **_Unless if we go to docker swarm and etc to get support_** 
+
 # NOTE: THE ABOVE 3 PROBLEMS ARE THEIR IN DOCKER
 
-
-2) Kubernetes -- Container Orchestration platform
+# Kubernetes -- Container Orchestration platform
