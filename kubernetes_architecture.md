@@ -38,6 +38,6 @@ _
 
 4) **Simple platform** -- Bydefault docker does not support any of the enterpise level application support (Load balancer, firewall, autoscale, auto healing, api gateways -- not supported in docker) by default it will not enterpise level applicaiton support **_Unless if we go to docker swarm and etc to get support_** 
 
-# NOTE: THE ABOVE 3 PROBLEMS ARE THEIR IN DOCKER
+**NOTE: THE ABOVE 3 PROBLEMS ARE THEIR IN DOCKER**
 
 # Kubernetes -- Container Orchestration platform
