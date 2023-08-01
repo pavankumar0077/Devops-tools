@@ -6,7 +6,7 @@ Ex: For example we have 100 conatiners and suddenly one container is taking more
 other conatiner is not getting resources (It will die or if it not already scheduled conatiner will not get 
 started. If their is lack of resouces then container will die bec'z we have one host here.
 
-Problems
+Problems with docker
 --
 
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/67009286-43dd-42c3-be21-0a2c6c3b8801)
