@@ -38,8 +38,17 @@ _
 
 4) **Simple platform** -- Bydefault docker does not support any of the enterpise level application support (Load balancer, firewall, autoscale, auto healing, api gateways -- not supported in docker) by default it will not enterpise level applicaiton support **_Unless if we go to docker swarm and etc to get support_** 
 
-**NOTE: THE ABOVE 3 PROBLEMS ARE THEIR IN DOCKER**
+**NOTE: THE ABOVE 3 PROBLEMS ARE THERE IN DOCKER**
 
-# Kubernetes -- Container Orchestration platform
+_# Kubernetes -- Container Orchestration platform_
+**CLUSTER** -- CLuster is a group of nodes 
+1) KUBERNETES in general installed as a cluster on master/node architecture, Whenever we install kubernetes we just insatll one master node and we create multiple nodes from master node
+2) Advantage of installing kubernetes as cluster is a faulty node (damaged) which is impacting the other app'n, since kubernetes have multiple node architecture immediately it puts pods in a
+different node or app'n in different node be'coz we have cluster like architecture problem is solved using cluster behavior of kubernetes, Kubernetes is bydefault cluster in nature.
+3) Replication controller or replica-set : We have increase replic-sets, For example for our app'n in festival session traffic will increase so the load will be increase, If we increase the
+no of replica's then the load will be distributed and shared among the created nodes from the replica-sets.
+4) KUbernetes supports **HPA(Horizontal Pod Autoscale)** -- using this we can directly say that whenever there is a load just keep increase replica-set pods, If any of the container reciving a threshold of 80% just increase one more container. By this way Auto-Scaling is solved.
+
+
 
 
