@@ -42,12 +42,28 @@ _
 
 _# Kubernetes -- Container Orchestration platform_
 **CLUSTER** -- CLuster is a group of nodes 
-1) KUBERNETES in general installed as a cluster on master/node architecture, Whenever we install kubernetes we just insatll one master node and we create multiple nodes from master node
-2) Advantage of installing kubernetes as cluster is a faulty node (damaged) which is impacting the other app'n, since kubernetes have multiple node architecture immediately it puts pods in a
-different node or app'n in different node be'coz we have cluster like architecture problem is solved using cluster behavior of kubernetes, Kubernetes is bydefault cluster in nature.
-3) Replication controller or replica-set : We have increase replic-sets, For example for our app'n in festival session traffic will increase so the load will be increase, If we increase the
+1) KUBERNETES in general installed as a cluster on **master/node architecture**, Whenever we install kubernetes we just install one master node and we create multiple nodes from master node. One advantage of installing Kubernetes as a cluster is that if a node becomes faulty and affects other applications, Kubernetes can quickly redistribute the pods to other nodes or applications within the cluster. This is because Kubernetes is designed with a multiple node architecture that behaves like a cluster, making it an ideal solution for this type of problem. It is important to note that Kubernetes is naturally a cluster-based system.
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/421ee753-5a4b-467c-98f6-720f43dcbfa7)
+
+   
+2) Replication controller or replica-set : We have increase replic-sets, For example for our app'n in festival session traffic will increase so the load will be increase, If we increase the
 no of replica's then the load will be distributed and shared among the created nodes from the replica-sets.
-4) KUbernetes supports **HPA(Horizontal Pod Autoscale)** -- using this we can directly say that whenever there is a load just keep increase replica-set pods, If any of the container reciving a threshold of 80% just increase one more container. By this way Auto-Scaling is solved.
+Kubernetes supports **HPA(Horizontal Pod Autoscale)** -- using this we can directly say that whenever there is a load just keep increasing replica-set pods, If any of the containers receiving a threshold of 80% increase one more container. In this way, Auto-Scaling is solved.
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/9bc1281b-b0b3-445e-893c-bb92e74af80d)
+
+
+3) Auto-Healing -- Wehnever their is damage kubernetes should control the damange and fix the damage, Ex: For some reason conatiner is going down, whenver conatiner is gng down or even before the container goes
+does kubernetes will start a new conatiner. How kubertes does that it has** API SERVER** understand that one of the conatiner is gng down or whenever it receives a signal call like conatiner is gng down immediately it will rollout the new container
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/fa484061-f176-49b6-b47c-c7514fea5bb8)
+
+
+4) Entrprise applicaiton support --
+_**Note: docker will not be used in the production be'coz it is not enterprise level **_
+
+
 
 
 
