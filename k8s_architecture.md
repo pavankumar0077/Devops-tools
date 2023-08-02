@@ -55,8 +55,9 @@ Their is request to create a load balancer or request to create storage form the
 
 **NOTE: ALTERNATIVES TO MINIKUBE IS K3S, K3 **
 
-
-
+INSTALL MINIKUBE 
+--
+# https://minikube.sigs.k8s.io/docs/start/
 
 
  
