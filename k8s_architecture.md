@@ -51,7 +51,11 @@ automatically detect and done some stuff for that, kubernets have basically some
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/a3732a84-ed25-4218-a831-7e02e96c454d)
 
 **CLOUD - CONTROL - MANAGER (CCM)** -- We can know that kubernetes can be run on mutiple clouds like EKS, AKS 
-Their is request to create a load balancer or request to create storage form the user, If we directly send this info to kubernetes it has to understand the underlined cloud provider like in awd or in azure, Kubernetes has to translate the request from user on to api requst  to the cloud provider understages so these machism shoudl be implemented on CCM that means in future their is new cloud implement XXX and you want to run kubernetes on this new cloud, Kubernets saying i can not write logic for this multiple cloud providers i will provide you a component called as CCM it is open source utility for on prremise this component does not required 
+Their is request to create a load balancer or request to create storage form the user, If we directly send this info to kubernetes it has to understand the underlined cloud provider like in awd or in azure, Kubernetes has to translate the request from user on to api requst  to the cloud provider understages so these machism shoudl be implemented on CCM that means in future their is new cloud implement XXX and you want to run kubernetes on this new cloud, Kubernets saying i can not write logic for this multiple cloud providers i will provide you a component called as CCM it is open source utility for on prremise this component does not required.
+
+**NOTE: ALTERNATIVES TO MINIKUBE IS K3S, K3 **
+
+
 
 
 
