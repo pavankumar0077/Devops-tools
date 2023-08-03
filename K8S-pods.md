@@ -96,12 +96,14 @@ minikube ssh
 Note: In real we use master or worker node ip address and we will ssh it
 
 To check pod is running or not
-```
+
 curl <Ip-pod>
+
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/a92135e3-e1ca-40f9-9c3e-6ca5fb294db1)
 
+
 NOTE: REF LINK FOR KUBERNETES CHEAT SHEET -- https://kubernetes.io/docs/reference/kubectl/cheatsheet/
-```
+
 To delete pods
 ```
 kubectl delete pod nginx <pod-name>
