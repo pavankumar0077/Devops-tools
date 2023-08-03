@@ -42,3 +42,94 @@ KUBECTL
 --
 1) kubectl is command line for kubernetes
 2) directly interact with kubernetes clusters, kubetes get nodes, get pods and etc commands
+
+Installation
+--
+**Kubectl** -- https://kubernetes.io/docs/tasks/tools/
+**minikube** -- https://minikube.sigs.k8s.io/docs/start/#:~:text=Download%20and%20run%20the%20installer%20for%20the%20latest%20release.&text=Add%20the%20minikube.exe%20binary,to%20run%20PowerShell%20as%20Administrator.&text=If%20you%20used%20a%20terminal,reopen%20it%20before%20running%20minikube.
+
+1) Minikube is a CLI tool that helps to create kubernetes cluster
+
+Kubernetes cluster will be started (Linux)
+```
+minikube start
+```
+Note: In windows or mac it will create a VM first on top of it will create a single node kubernetes cluster, In production we use master node and worker nodes based on requirements no. of workers nodes
+
+Create a pod
+--
+Ref link : https://kubernetes.io/docs/concepts/workloads/pods/
+1) A pod is a specific to run a docker
+
+Example
+--
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/130430fa-726d-45ce-8587-d7fb714f765e)
+
+Docker equlivant commmand kubernets 
+
+Step 1
+--
+Create pod.yaml file 
+```
+..
+.....
+.......
+```
+step 2 
+--
+Create pod 
+```
+kubectl create -f pod.yml
+```
+To get all pods
+```
+kubectl get pods
+```
+to get entire details of pod
+```
+kubectl get pods -o wide
+```
+To login to kubernetes cluster
+```
+minikube ssh
+```
+Note: In real we use master or worker node ip address and we will ssh it
+
+To check pod is running or not
+```
+curl <Ip-pod>
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/a92135e3-e1ca-40f9-9c3e-6ca5fb294db1)
+
+NOTE: REF LINK FOR KUBERNETES CHEAT SHEET -- https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+```
+To delete pods
+```
+kubectl delete pod nginx <pod-name>
+```
+HOW TO GET AUTOSCALING AND AUTOHEALING 
+--
+1) We have a wrapper called deployments in kubernetes
+2) We have to use deployments in kubernetes to get the features of autoscaling and autohealing
+
+Note: In real we don't deploy pods we use deployments, stateful sets, deamon sets, Way to deploy apps
+
+Q) How do you debug pods, or debug applications issues in kubernetes
+How to verify the appn's
+--
+```
+kubectl describe pod <pod-name>
+kubectl describe pod nginx
+```
+To check lods
+```
+kubectl logs <pod-name>
+kubectl logs nginx
+```
+
+
+
+
+
+
+
+
