@@ -45,9 +45,71 @@ To get all resources with all the namespaces
 ```
 kubect get all -A
 ```
+Login to remote kubernetes cluster
+--
+```
+ssh -i <>
+ssh -i (identity) name or node or ip address of the node
+```
 
 
 Interview questions
 --
 1) Difference between pods vs container vs deployment
-2) depolyment and replica-set 
+2) depolyment and replica-set
+
+Create a deployment
+--
+Ref doc : https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#:~:text=A%20Deployment%20manages%20a%20set,state%20at%20a%20controlled%20rate.
+
+To create deployment
+--
+```
+kubectl apply -f deployment.yml
+```
+OR
+```
+kubectl create -f deployment.yml
+```
+NOTE: AS SOON AS WE CREATED DEPLOYMENT WE HAVE DEPLOYMENT AND POD AS WELL BE'COZ OF REPLICAS 
+it is done by replica-set controller 
+
+To get the deployment
+```
+kubectl get deploy
+```
+To get pods 
+```
+kubectl get pods
+```
+To get replica-set
+--
+```
+kubectl get rs
+```
+To watch pods in live
+--
+```
+kubectl get pos -w
+```
+
+NOTE: DEPLOYMENT is an abstraction, that means we don't have to create replica-sets, pods, It says create one resouce called deployment.yaml and i will create the rest of them, It is responsible for auto-healing and zero down time in kubernetes,  deployment will take help of replica-set and replica-set is kubernetes controller which is actually doing it 
+
+Kubernets controller
+--
+1) It is nothing but a Go language application that kubernetes as written which will ensure that a specific behaviour is implemented, Ex:
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/261f53a3-0190-42b6-9ea9-84b2c5793f1d)
+2) we are watch the pod 
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/ef0562b1-da2b-476c-970e-82782e9873ce)
+3) deleted pod
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/38eb5416-c535-4074-b66e-04fc25fc7b83)
+4) It is again re-creating be'coz of auto-healing , Replica-set controller will do this
+
+
+In prod env
+--
+1) We never create pods directly
+2) We create deployment and it will created Replica-set and then Pod will be created
