@@ -37,10 +37,15 @@ Deployment
 
 11) Controllers - They maintain a state, it always ensures that the desired state is present on the acutal cluster both are some or not. We can create custom controllers as well.
 
-To get all the deployments, pods, psv, svc and etc use 
+To get all the deployments, pods, psv, svc and etc use (All the resouces in particular name space)
 ```
 kubectl get all
 ```
+To get all resources with all the namespaces
+```
+kubect get all -A
+```
+
 
 Interview questions
 --
