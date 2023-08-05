@@ -127,7 +127,10 @@ To check lods
 kubectl logs <pod-name>
 kubectl logs nginx
 ```
-
+To get all the deployments, pods, psv, svc and etc use 
+```
+kubectl get all
+```
 
 
 
