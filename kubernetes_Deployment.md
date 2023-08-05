@@ -37,6 +37,11 @@ Deployment
 
 11) Controllers - They maintain a state, it always ensures that the desired state is present on the acutal cluster both are some or not. We can create custom controllers as well.
 
+To get all the deployments, pods, psv, svc and etc use 
+```
+kubectl get all
+```
+
 Interview questions
 --
 1) Difference between pods vs container vs deployment
