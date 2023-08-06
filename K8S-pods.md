@@ -139,6 +139,13 @@ To get logs of the pod
 ```
 kubectl logs -f <pod-name>
 ```
+To get exactly what is running when we run kubectl commmand
+```
+kubectl get pods -v=8
+```
+Note: As we increase the no of v value verbose we get more information
+
+
 
 
 
