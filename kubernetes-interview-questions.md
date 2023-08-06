@@ -62,10 +62,10 @@ correctly, and restarts them if necessary.
 
 
 10) Day to Day activities on Kubernetes
-A) 1) As part of the devops engineer role we manager kubernetes cluster for our organization and we also ensure that
+10.1) As part of the devops engineer role we manager kubernetes cluster for our organization and we also ensure that
 the applications that are deployed on kubernetes cluster and there are no issues with the application
-2) We can setup monitoring on kubernetes cluster, we ensure that whenever we have bugs on the kubernets cluster for example the dev or not able to trobleshoot some issues with respective pods with respective services not able to route the traffic into the kubernetes cluster
-3) In such cases as Subject matter expert we come into picture we solve the issues, But apart from that we also do
+10.2) We can setup monitoring on kubernetes cluster, we ensure that whenever we have bugs on the kubernets cluster for example the dev or not able to trobleshoot some issues with respective pods with respective services not able to route the traffic into the kubernetes cluster
+10.3) In such cases as Subject matter expert we come into picture we solve the issues, But apart from that we also do
 lot of maintance activities for example: we have kuberneets cluster with 3 master nodes 10 worker nodes So we have to do some continous maintaince acitvities on these worker nodes probably upgrading the versions of the worker nodes or installing some default packages, ensuring the worker nodes are security vulnerblilites. Anyone in the organization have any issue they will craete a JIRA tickets we solve that issues 
 
    
