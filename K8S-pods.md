@@ -135,6 +135,10 @@ To get all resources with all the namespaces
 ```
 kubect get all -A
 ```
+To get logs of the pod
+```
+kubectl logs -f <pod-name>
+```
 
 
 
