@@ -112,6 +112,9 @@ Kubernets controller
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/38eb5416-c535-4074-b66e-04fc25fc7b83)
 4) It is again re-creating be'coz of auto-healing , Replica-set controller will do this
 
+REF for commands
+--
+https://www.baeldung.com/linux/kubernetes-delete-all-pods
 
 In prod env
 --
