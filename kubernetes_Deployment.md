@@ -92,6 +92,10 @@ To watch pods in live
 ```
 kubectl get pos -w
 ```
+To delte all the resources like pods, deployments, svc and etc
+```
+kubectl delete all -all -n <name-sapce>
+```
 
 NOTE: DEPLOYMENT is an abstraction, that means we don't have to create replica-sets, pods, It says create one resouce called deployment.yaml and i will create the rest of them, It is responsible for auto-healing and zero down time in kubernetes,  deployment will take help of replica-set and replica-set is kubernetes controller which is actually doing it 
 
