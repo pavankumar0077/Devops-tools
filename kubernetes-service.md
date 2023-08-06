@@ -89,3 +89,5 @@ NODE PORT mode
 2) Whoever has EC2 instance trafiic or VPC traffic they can access the application or pods.
 
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/57d9363a-d2f8-4268-b93e-5eb0acebbe1d)
+
+
