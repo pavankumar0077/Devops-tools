@@ -88,6 +88,18 @@ NODE PORT mode
 1) It can give access to people who has access to WORKER NODE 1, So whoever can access the workder node IP ADDRESS. Let say the worker nodes are EC2 instance ip address, They can access me
 2) Whoever has EC2 instance trafiic or VPC traffic they can access the application or pods.
 
+To edit service
+--
+```
+kubectl edit svc <svc-name>
+```
+
+NOTE: 
+--
+1) NodePort -- local as well as who has access to instance or minikube
+2) LoadBalncer -- Everyone in the world
+Note: Bydefault minikube does not support LoadBalancer type only EC2 or other clouds supports, people are working to get this feature in minikube as well.
+
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/57d9363a-d2f8-4268-b93e-5eb0acebbe1d)
 
 
