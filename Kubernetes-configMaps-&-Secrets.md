@@ -108,8 +108,8 @@ The above approach is good, but we have problem here
  --
  1) Container does not allow to change the port number, we have re-create  the container
  2) But in prod env  we can not do that in conatiner, bec'coz it will may lose the traffic
-
-
-
-
-
+```
+USEING VOLUME MOUNTS
+--
+1) Instead of using env variables, Config-Map info will be saved in file and Dev's will use the file.
+2) 
