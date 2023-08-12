@@ -60,3 +60,56 @@ and even he can go to ETCD and get the info required.
    4.1) Secrets -- Hacker might use same approach like point no.3 like describe or edit
    4.2) ETCD -- ecrypted so not possible to hack be,coz hacker does not have de-ecryption key
 5) KUBERNETES is saying whenver you are creating SECRETS use a STRONG RBAC ( Least previllege -- give only to who actuall requirred this info )
+
+Commands
+--
+To get the config-map
+--
+```
+kubectl get cm
+```
+To describe cm
+--
+```
+kubectl describe cm test-cm
+```
+To apply cm or create
+--
+```
+kubectl apply -f cm.yml
+```
+To get env info present in the container
+--
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/39770d25-b15e-4dc9-8d5e-826c182b7f88)
+
+```
+kubectl exec -it sample-python-app-6fd477bdfb-pkps4 (pod-name) -- /bin/bash
+```
+To check the env variables
+--
+Inside the pod
+```
+env | grep db
+```
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/716622eb-cef1-4f0d-8f29-514eaf165850)
+
+NOTE: Now we can see that PORT Numer, So developer import it using os modules like 
+```
+os.env("DB-PORT") -- in case of python application
+``
+The above approach is good, but we have problem here
+1) For some reason if we change the PORT number in CM.yaml file
+2) The application will still have old port number, So the application will not work
+3) Pod will not know that port number is changed
+
+**TO SOLVE THE ABOVE ISSUE KUBERNETES SAID (Changing the env variable inside the kubernetes is not possible inside containers is not possible.**
+
+**To SOVE WE HAVE TO USE VOLUME MOUNTS**
+ --
+ 1) Container does not allow to change the port number, we have re-create  the container
+ 2) But in prod env  we can not do that in conatiner, bec'coz it will may lose the traffic
+
+
+
+
+
