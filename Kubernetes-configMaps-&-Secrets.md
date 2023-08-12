@@ -112,4 +112,29 @@ The above approach is good, but we have problem here
 USEING VOLUME MOUNTS
 --
 1) Instead of using env variables, Config-Map info will be saved in file and Dev's will use the file.
-2) 
+2) Now when we go inside the pod (container) evn variable is not their but we have file call db-port
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/34495ef2-1b52-4ac8-b5af-31238c7e0d07)
+3) So now i have changed dp-port to 3307 in cm.yaml file, and applied it, SO NOT WITHOUT RESTARTING THE PODS OF DEPLOYMENT.
+4) THE PODS will know the port number as 3307
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/c8019192-7ddd-47c5-8fa9-17fe38b9e835)
+5) If you know the path inside the pod, evertime we don't need to go inside the container, We can also use like this as well
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/cbcc8655-c2bb-4f3c-8540-e0ea84c7f603)
+6) We can create the secret or config-map in differ way as well
+```
+kubectl create secret generic test-secret --from-literal=db-port="3306"
+```
+7) As we know that if we create in secret we have the content in encrypted format
+8) Can we decrypt it, But bydefault kubernetes gives bas64 encryption we can also use other encryption techiques for more security
+9) Check the below SS for ref
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/16b6ac42-24a5-4b34-941d-c8bdb2bd0662)
+
+OTHER ENCRYPTION
+--
+1) hashicrop vault
+2) seal serects
+
+Use other strong encryption instead of base64 
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/b3aa037d-a9af-48c8-81ec-d4747049a992)
+
+
