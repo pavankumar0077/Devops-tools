@@ -62,6 +62,12 @@ AFTER THIS HOW DO WE MANAGE THE RULES OR CONFIGURATIONS
 **ROLE/Cluster role,
 role binding/cluster role binding**
 
-8) Firstly we creat a role and then we will access this to the developers like says, they should have access to pod,
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/8fb28520-7d86-48a5-8304-c2249b6b25a6)
+
+9) Firstly we creat a role and then we will access this to the developers like says, they should have access to pod,
 config-maps, secrets with in the same namespace
-9) To have with in single namespace we create a ROLE, if they want across the cluster then we create a CLUSTER ROLE  
+10) To have with in single namespace we create a ROLE, if they want across the cluster then we create a CLUSTER ROLE
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/c5d7821c-da0d-4796-878d-d1a96a4198c5)
+
+11) We have created the role, Now you have attached this role to users, So to attach we use **ROLE BINDING** 
