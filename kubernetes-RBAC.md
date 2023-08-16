@@ -70,4 +70,10 @@ config-maps, secrets with in the same namespace
 
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/c5d7821c-da0d-4796-878d-d1a96a4198c5)
 
-11) We have created the role, Now you have attached this role to users, So to attach we use **ROLE BINDING** 
+11) We have created the role, Now you have attached this role to users, So to attach we use **ROLE BINDING**
+
+NOTE: We can use Redhat debicated --  Used for Kubernetes application development platform
+1) Create redhat account ```https://developers.redhat.com/developer-sandbox```
+2) Login to ``` https://console-openshift-console.apps.sandbox-m3.1530.p1.openshiftapps.com/``` to get sandbox
+3) Create a deployment nginx 3.1) We can create directly 3.2) We can use after login to sandbox console -- top right corner click on profile icon and click on login commmands
+4) login display -- copy login command and paste in your local ternianl, **NOTE: It is shared cluster trail only for 30 days, You can use any email address like temp-mail**
