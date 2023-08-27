@@ -74,7 +74,12 @@ How one can write a custom controller
 component called client-go this client-go will allows us to talk to the kubernets api.
 4) How to write CC: We use go-lang we have watchers and listeners, By default client-go will set up watchers like we have deployment watcher, service watcher like if we perform update,delete and create their is inbuilt watchers that kubernets are created for this resources whenever we performs any action kubernets will come to know.
 5) For Custom - Controller we have a write a new watchers (We can use Kubernets controller runtime) it a go-lang based kubernetes package using thsi we can setup watchers
-6) ISTIO people set up watchers for virtual service so any action create,update,delete there are watchers they will notify client-go in client-go we have package called reflector using this reflector whenever you understand a new virtual service is created you can put that in FIFO (First in first out) queue and will put in the worker queue and we will start reading each of the element or objects form the queue and wathcers will identify and update in the worker queue and we start processing each and every resource
+   
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/51bc0ddd-a0cd-40a9-9642-9191cc99f5fc)
+   
+7) ISTIO people set up watchers for virtual service so any action create,update,delete there are watchers they will notify client-go in client-go we have package called reflector using this reflector whenever you understand a new virtual service is created you can put that in FIFO (First in first out) queue and will put in the worker queue and we will start reading each of the element or objects form the queue and wathcers will identify and update in the worker queue and we start processing each and every resource
+8) Now it will start creating required functionality on the kubernetes in this case it will start the creating a virtual service configuration on kubernetes cluster.
+9) We can use operator SDK as well 
 
 
 
