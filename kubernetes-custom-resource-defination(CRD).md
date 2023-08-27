@@ -1,6 +1,6 @@
 # CUSTOMER RESOURCE DEFINATION (CRD)
 
-![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/c4bb77d7-98b8-4821-96c3-7a434e4b1626)
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/cffd37f5-7337-4511-9898-cf838943d4dc)
 
 
 1) CRD
