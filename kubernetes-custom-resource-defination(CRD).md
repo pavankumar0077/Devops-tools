@@ -79,7 +79,14 @@ component called client-go this client-go will allows us to talk to the kubernet
    
 7) ISTIO people set up watchers for virtual service so any action create,update,delete there are watchers they will notify client-go in client-go we have package called reflector using this reflector whenever you understand a new virtual service is created you can put that in FIFO (First in first out) queue and will put in the worker queue and we will start reading each of the element or objects form the queue and wathcers will identify and update in the worker queue and we start processing each and every resource
 8) Now it will start creating required functionality on the kubernetes in this case it will start the creating a virtual service configuration on kubernetes cluster.
-9) We can use operator SDK as well 
+9) We can use operator SDK as well
+
+Resources for CRD
+--
+1) https://github.com/istio/istio/tree/master
+2) https://www.cncf.io/
+3) https://github.com/kubernetes/sample-controller
+4) https://istio.io/latest/docs/setup/install/helm/
 
 
 
