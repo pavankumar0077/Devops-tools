@@ -41,7 +41,8 @@ for example if we are user and we are creating deployment.yaml file in our deplo
 like api, specs, kind template, pod, etc how kubernetes understands that this created deployment.yaml file
 is current of not.
 
-![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/6fe75b0c-63c1-40a3-93ab-034edca83ae4)
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/e7d09cb3-2a31-4e91-a5e8-dac9c6457cc7)
+
 
 1.1) Kubernets will have template which has all the fields related to deployment.yaml file kubernetes throws
 error if we read like xyz something which is not there, Be'coz kubernetes have a defination with it that's why
