@@ -99,6 +99,62 @@ docker-compose files**
 
 NOTE : IN COMPOSE FILE WE HAVE IMAGE TAG : IMAGE CAN BE TAKEN FROM DOCKER HUB AS WELL
 
+State of the docker-compose file
+--
+1) Whatever we define in the docker-compose file that should be desired state of our service or application
+2) We change the state of any of the services then docker engine will check the state available and
+do the changes only abilicable (Only check in the modified services)
+3) ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/0cf6e810-0159-4dd3-b42c-ca685736db8a)
+4) Here we are changing the port of the dept-service, Now checking for changes ``` sudo docker-compose up -d ``` only re-created dept-service not user-service, As we only modified dept-service
+
+# NOTE: Docker-compose is only used in a single host machine, we don't run on the differnt host machine all conatiners will be in single host machine. If we want multiple conatiners in differnethost machine then will have DOCKER-SWARM. So this is the disadvantage  of using docker-compose 
+
+Push to dockerhub
+--
+Login
+``` sudo docker login ```
+
+Push
+``` sudo docker-compose push ``` To push the all images present in local
+
+Pull
+``` sudo docker-compose pull ``` To pull the images from the docker hub
+Before pulling create the dir's, specified in the docker-compose file like user-servie and depart service
+
+``` sudo docker-compose up ``` To up the services 
+
+Override docker-compose file
+--
+1) So in prod we have multiple - docker files the default file name is docker-compose.yaml when we are using this then we are not have to give any file info flag in command
+2) docker-compose.override.yaml - the docker-compose file will be base file for the all the configurations it will find the docker compose from base dir 1st it will configure according to docker-compose file
+3) From the override file it will also the run the override file and it will override the settings from that particular override file
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/e711dc86-a3e6-4e09-ad75-73e319d9824a)
+
+4) Now if we go to docker-compose ``` sudo docker-compose up -d ```, You can see the new image for
+the service from ther override file ``` sudo docker-compose images ```
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/6a068853-d9d0-4e08-ac71-401b540940bc)
+
+Now we have change the port number, the changes are append so make sure to check the changes carefully
+--
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/4eab5f61-69a6-4009-8ea5-8df9bc38295f)
+
+Generally in differnet - different we give different names like
+docker-compose.prod, stage, testing, etc
+
+To up and down the multiple docker-compose files
+--
+``` sudo docker-compose -f .\docker-compose.yml -f .\docker-compose.ovveride.yaml up -d ```
+
+``` sudo docker-compose -f .\docker-compose.yml -f .\docker-compose.ovveride.yaml down -d ```
+
+
+
+
+
+
+
 
 
 
