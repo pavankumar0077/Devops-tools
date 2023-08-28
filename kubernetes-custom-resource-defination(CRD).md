@@ -43,16 +43,21 @@ is current of not.
 
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/e7d09cb3-2a31-4e91-a5e8-dac9c6457cc7)
 
-
+```
 1.1) Kubernets will have template which has all the fields related to deployment.yaml file kubernetes throws
 error if we read like xyz something which is not there, Be'coz kubernetes have a defination with it that's why
 it is able to throw error.
+
 1.2) A CRD is a yaml file which is used to introduce a new type of API to kubernetes and that will have all the
 fields a user can submit in the custom resource
+
+```
 
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/64dfe6ef-9e1e-402a-85c0-b00f655a8b85)
 
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/186aa451-151f-414e-ab74-00304f4081e8)
+
+```
 
 1.3) User submited a CR and validated against a CRD, CR is created under kubernetes cluster, In kubernetes you have deployment controller which will take care of replica-set and rs controller will create pod. Kubernetes controller is doing all these things.
 1.4) Similarly here we need custom controller for CR, Custom Kubernetes controller which is already deployed in kubernetes cluster 
@@ -61,6 +66,8 @@ fields a user can submit in the custom resource
 1.7) Here the the VS CR is not being watched by no-one, So here we need a Custom Controller 
 1.8) Custom Controller - deployed using Helm or manifest or operators, He can created across the cluster and for specific namesapce based features the controller supporting.
 1.9) Now controller will perform the required action, In this case the required action is ISTIO or service mesh mutual DLS or east-west traffic, horizontal traffic, So this ISIO controller which we deployed will read the CR and perform the actions
+
+```
 
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/d6fbbb27-db24-49be-9a95-83e904f8f90a)
 
