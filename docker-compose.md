@@ -179,8 +179,48 @@ get it from dockerhub using image. ex: db: image: mysql
 ![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/2a388a0b-8201-4901-ab4b-1d81b16ad0ec)
 
 3) We can have one or more volume mappings, Here vidly is the volumn name mapping to a dir inside the container. Bydefault mongo uses or saves data in /data/db. We generally give host or local machine dir.
-4) Define volume first before we are using it 
+4) Define volume first before we are using it
+5) We can order in anyway like as of now we have web 1st and api 2nd, we can put api 1st and web 2nd as well order doesn't matter.
 
+How to build images
+--
+1) ``` sudo docker-compose build --help```   We will more options to use 
+2) ```--no-cache``` With this we can prevent cache while building. Like sometimes we encounter wired issues and we ensure the cache is not used
+3) ```--pull``` with this we can always pull the newer version of the image
+4) ``` sudo docker-compose build ``` to build the image
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/ffe91c1d-8efd-4e28-841d-d68ef03f3a4f)
+
+5) we can also use depends_on to tell where the dockefile is
+6) IF you want to force re-build then without using cache then use ```sudo docker-compose build --no-cache```
+
+How to run the appliication or images
+--
+1) ```sudo docker-compose up``` If images are ready then docker compose will run in the containers, if not the images are build automatically.
+2) ```sudo docker-compose up -d``` In the detach mode run in background.
+3) ```sudo docker-compose donw``` This is stop the containers, But images are still there so next time if we are trying to start the application it will start preety quickly.
+
+Network
+--
+1) docker-compose will automcatically create network adn add our containers to that network,So this containers can talk to each other
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/9b20c1a5-d75a-436b-8aaf-fe4164349854)
+
+3) Go inside the container ```sudo docker exec -it 8c6 sh`` -- Permission denied. Because we haven't logged in as a root user
+4) To login as a root user we can use ```sudo docker exec -it -u root <container-id> sh```
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/5dbd3f0d-c917-4a7b-9566-51412b3f1202)
+5) Docker comes with the embedded DNS SERVER that contains the name and ip of these containers. In this container we have a component called DNS RESOLVER it talks to the DNS server to find the ip address of the target container.
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/3792ba90-6c3f-4680-9b32-64a5bad07f78)
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/69c92df4-867c-48ec-a231-2b809e6bbcc0)
+
+
+7) EX: So when we ping the api container. This dns resolver asks dns server. What is ip address of api machine or api container. DNS server returns the ip address then web container will directly talk to the api container using that ip address.
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/d121b394-0c13-49e7-9c7b-535c7fb5c444)
+
+8) So each container as an IP ADDRESS and it is part of a network.
 
 
 
