@@ -161,9 +161,9 @@ Remove docker images
 1) We generally remove images by using ``` sudo docker image rm image-1 image-2 ... ```
 2) How to get all images id's ``` sudo docker images ls ``` Where we are getting all images, But if we use
 ``` sudo docker ls -q ``` then we will only get image-id's. Now we can pass this as an argument to docker remove command
-3) ``` sudo docker image rm $(docker image ls -q) ``` If we run this we will get error because some of the containers are running or stopped containers. So we always remove containers first.
-4) ``` sudo docker container rm  -f $(docker container ls -aq) ``` Here -a to being stopped conatiners are well and -q to get the only id's of the containers.
-5) To remove all the images ``` sudo docker image rm -f $(docker image ls -q)```
+3) ``` sudo docker image rm $(sudo docker image ls -q) ``` If we run this we will get error because some of the containers are running or stopped containers. So we always remove containers first.
+4) ``` sudo docker container rm  -f $(sudo docker container ls -aq) ``` Here -a to being stopped conatiners are well and -q to get the only id's of the containers.
+5) To remove all the images ``` sudo docker image rm -f $(sudo docker image ls -q)```
 
 
 
