@@ -166,6 +166,22 @@ Remove docker images
 5) To remove all the images ``` sudo docker image rm -f $(sudo docker image ls -q)```
 
 
+Docker-compose file example
+--
+1) Here services are like frontend, backend and db. The name can be anything. We are gng to specific service or app'n folder and getting the dockerfile.
+2) NOTE: If we have dockerfile then we can build it, If not we can also
+get it from dockerhub using image. ex: db: image: mysql
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/e674b9fd-b2ad-4bfb-b349-fda7bedfbff5)
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/18c28194-1ad3-4525-91cf-f8a550336289)
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/2a388a0b-8201-4901-ab4b-1d81b16ad0ec)
+
+3) We can have one or more volume mappings, Here vidly is the volumn name mapping to a dir inside the container. Bydefault mongo uses or saves data in /data/db. We generally give host or local machine dir.
+4) Define volume first before we are using it 
+
+
 
 
 
