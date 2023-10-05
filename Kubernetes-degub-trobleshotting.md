@@ -1,9 +1,9 @@
 # TROUBLESHOOTING COMMON KUBERNETES PROBLEMS
 
-KUBERNETES REF LINK : https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.27/
-KUBERNETES CHEATSHEET : https://kubernetes.io/docs/reference/kubectl/cheatsheet/
-REF LINK : https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/
-REF LINK : https://www.airplane.dev/blog/category/kubernetes
+1) KUBERNETES REF LINK : https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.27/
+2) KUBERNETES CHEATSHEET : https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+3) REF LINK : https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/
+4) REF LINK : https://www.airplane.dev/blog/category/kubernetes
 
 ### KIND IS VERY FAST IN DEVELOPMENT : IT RUNS INSIDE A DOCKER CONTAINER
 - MINIKUBE
