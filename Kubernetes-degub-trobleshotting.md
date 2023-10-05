@@ -2,6 +2,8 @@
 
 KUBERNETES REF LINK : https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.27/
 KUBERNETES CHEATSHEET : https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+REF LINK : https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/quota-memory-cpu-namespace/
+REF LINK : https://www.airplane.dev/blog/category/kubernetes
 
 ### KIND IS VERY FAST IN DEVELOPMENT : IT RUNS INSIDE A DOCKER CONTAINER
 - MINIKUBE
@@ -82,5 +84,38 @@ deployment.apps/nginx created ```
 
 LIVENESS PROBE : IN PRODUCTION Senearios, You will define your POD with both LIVENESS PROBE and READYNESS PROBE 
 - This liveness probe basically use to understand that your application is live
-- readyness probe is used to understand that your application is ready to accept the traffic 
+- readyness probe is used to understand that your application is ready to accept the traffic
+
+## ==================================================================
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/f2d29db9-aa9d-4caa-85cb-2edd69b0f2a3)
+
+## OOMKilled (Out of memory killed)
+
+- Ex: We have kubernets cluster with ONE NODE AND ONE MASTER architecture on this node we have setuped a kuberntes POD
+- Simiarly to you all the other who has the access to namespace they started to create more and more NODES
+- Here NODE is nothing but EC2 or VM
+- Because people started to create more and more you RUN INTO OUT OF MEMORY, Node is not allowing you to create any more resources
+- Or application trying to consumer more resources from the NODE and it is not getting enough resources
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/b4969698-1fc8-482e-bdc8-cbadc69e2ad7)
+
+SENARIO 1
+==
+- In Generally kubernetes, There are 2 different types of OOM Errors:
+- 1) OOMKILLED : Limit Overcommit
+  
+
+![image](https://github.com/pavankumar0077/Devops-tools/assets/40380941/a62fe5b1-3ed7-4b98-973d-7c059934e22a)
+
+- Inside the application there will a PID to find PID, directly login into the container or the pod and use the command like ``` ps -ef ```
+- Using the PID can we take the THREAD DUMP
+- THREAD DUMP --- Take the thread dump using kill - 3 command or JSTACK tool
+- Take the kill - 3 ouuutpt and send to developer
+
+SENARIO 2
+==
+2) OOMKILLED : Container Limit Reached
+- cLUSTER HAS LOT OF space, Dev's started to deploy more and more applications
+- ``` kubectl get events ``` to find out
+- ``` https://www.airplane.dev/blog/category/kubernetes``` tool to fix this issues 
    
