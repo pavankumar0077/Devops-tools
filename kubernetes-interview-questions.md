@@ -78,6 +78,7 @@ them as a datasource. You may put load balancer in front of multiple prometheus
 instances, use sticky sessions and failover if one of the prometheus instance dies.
 This make things complicated. Thanos is another project which solve these
 challenges.
+- Ref link : https://thanos.io/v0.10/thanos/getting-started.md/
 
 12) How do you handle your kubernetes cluster security?
 - There are many things that you can do, some of them are:
@@ -129,4 +130,22 @@ users and administrators temporarily evict pods for specific cluster actions. Us
 other solutions for involuntary pod disruptions, such as replicating applications and spreading
 them across zones.
 
-18) 
+18) What is a custom controller? Did you build one and How to build
+one ?
+
+19) What is a SideCar Container and when to use one ?
+- Whenever you want to extend the functionality of the existing single container pod
+without touching the existing one.
+- Whenever you want to enhance the functionality of the existing single container pod
+without touching the existing one.
+- You can use this pattern to synchronize the main container code with the git server pull.
+- You can use this pattern for sending log events to the external server.
+- You can use this pattern for network-related tasks.
+- source: https://medium.com/bb-tutorials-and-thoughts/kubernetes-interview-questions-part-1-eb8
+8a9df785f
+
+20) What is a Pod Security Policy ?
+- Instead of this you can use:
+	•  Pod Security Admission
+	 Pod security restrictions applied at the Namespace level when pods are created.
+	•  A 3rd party admission plugin, that you deploy and configure yourself.
