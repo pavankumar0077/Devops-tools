@@ -68,4 +68,65 @@ the applications that are deployed on kubernetes cluster and there are no issues
 - In such cases as Subject matter expert we come into picture we solve the issues, But apart from that we also do
 lot of maintance activities for example: we have kuberneets cluster with 3 master nodes 10 worker nodes So we have to do some continous maintaince acitvities on these worker nodes probably upgrading the versions of the worker nodes or installing some default packages, ensuring the worker nodes are security vulnerblilites. Anyone in the organization have any issue they will craete a JIRA tickets we solve that issues 
 
-   
+11) What are some challenges with Prometheus ?
+- Despite of being very good at K8 monitoring, prometheus still have some issues:
+Prometheus High AvaliablityHow do you handle your kubernetes cluster security? support.
+● No downsampling is available for collected metrics over the period of time.
+● No support for object storage for long term metric retention.
+- You may run multiple instances of prometheus HA but grafana can use only of
+them as a datasource. You may put load balancer in front of multiple prometheus
+instances, use sticky sessions and failover if one of the prometheus instance dies.
+This make things complicated. Thanos is another project which solve these
+challenges.
+
+12) How do you handle your kubernetes cluster security?
+- There are many things that you can do, some of them are:
+By default, POD can communicate with any other POD, we can setup network
+policies to limit this communication between the PODs.
+RBAC (Role based access control)
+Use namespaces for multi tenancy
+● Set the admission control policies to avoid running the privileged containers.
+Turn on audit logging.
+
+13) How two containers running in a single POD have single IP
+address?
+- Kubernetes makes use of Pause containers for sharing networking.
+- Kubernetes implements this by creating a special container for each pod whose
+only purpose is to provide a network interface for the other containers. These is
+one pause container which is responsible for namespace sharing in the POD.
+Generally, people ignore the existence of this pause container but actually this
+container is the heart of network and other functionalities of POD. It provides a
+single virtual interface which is used by all containers running in a POD.
+
+14) What is Service Mesh and why do we need it?
+- A service mesh ensures that communication among containerized and often
+ephemeral application infrastructure services is fast, reliable, and secure. The
+mesh provides critical capabilities including service discovery, load balancing,
+encryption, observability, traceability, authentication and authorization, and
+support for the circuit breaker pattern.
+
+15) What is init container and why do we need it ?
+- Init Containers are the containers that should run and complete before the startup of the
+main container in the pod. It provides a separate lifecycle for the initialization so that it
+enables separation of concerns in the applications.
+
+- All the init Containers will be executed sequentially and if there is an error in the Init
+container the pod will be restarted which means all the Init containers are executed
+again. So, it's better to design your Init container as simple, quick, and Idempotent.
+
+- source: https://medium.com/bb-tutorials-and-thoughts/kubernetes-interview-questions-part-1-eb8
+8a9df785f
+
+16) What is a Pod Disruption Budget ?
+- A PDB specifies the number of replicas that an application can tolerate having, relative to how
+many it is intended to have. For example, a Deployment which has a .spec.replicas: 5 is
+supposed to have 5 pods at any given time. If its PDB allows for there to be 4 at a time, then the
+Eviction API will allow voluntary disruption of one (but not two) pods at a time.
+
+17) What's the Difference Between a Voluntary and Involuntary Disruption?
+- It is important to remember that PDBs only apply to voluntary pod disruptions/evictions, where
+users and administrators temporarily evict pods for specific cluster actions. Users may apply
+other solutions for involuntary pod disruptions, such as replicating applications and spreading
+them across zones.
+
+18) 
