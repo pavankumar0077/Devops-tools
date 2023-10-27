@@ -93,6 +93,20 @@ To edit service
 ```
 kubectl edit svc <svc-name>
 ```
+To get the service after apply with url
+--
+```
+minikube service node-app-service
+
+idrbt1@idrbt1:~/k8s$ minikube service node-app-service
+|-----------|------------------|-------------|-----------------------------|
+| NAMESPACE |       NAME       | TARGET PORT |             URL             |
+|-----------|------------------|-------------|-----------------------------|
+| default   | node-app-service |        5000 | http://192.168.59.100:30001 |
+|-----------|------------------|-------------|-----------------------------|
+🎉  Opening service default/node-app-service in default browser...
+
+```
 
 NOTE: 
 --
