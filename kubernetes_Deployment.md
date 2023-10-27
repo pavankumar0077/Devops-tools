@@ -97,6 +97,21 @@ To delte all the resources like pods, deployments, svc and etc
 kubectl delete all -all -n <name-sapce>
 ```
 
+To get the service after apply with url
+--
+```
+minikube service node-app-service
+
+idrbt1@idrbt1:~/k8s$ minikube service node-app-service
+|-----------|------------------|-------------|-----------------------------|
+| NAMESPACE |       NAME       | TARGET PORT |             URL             |
+|-----------|------------------|-------------|-----------------------------|
+| default   | node-app-service |        5000 | http://192.168.59.100:30001 |
+|-----------|------------------|-------------|-----------------------------|
+🎉  Opening service default/node-app-service in default browser...
+
+```
+
 NOTE: DEPLOYMENT is an abstraction, that means we don't have to create replica-sets, pods, It says create one resouce called deployment.yaml and i will create the rest of them, It is responsible for auto-healing and zero down time in kubernetes,  deployment will take help of replica-set and replica-set is kubernetes controller which is actually doing it 
 
 Kubernets controller
