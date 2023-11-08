@@ -25,7 +25,7 @@ Split the docker file in multii parts
 -- both stage 1 and stage 2 will remain in one dockerfile only
 -- But we have two FROM statements.
 -- In stage the FROM -- will have to choice very minimal image, like image that have only python runtime or java 
-or etc basically very less size image, or distro images
+or etc basically very less size image, or distrolless images
 -- In the stage 2 or final srage we have ENTRYPOINT OR CMD, The advantage with this is we have reduced image size 
 significantly so stage 1 content will not be in the final image.
 -- Here stage 1 is the build image part
