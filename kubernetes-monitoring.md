@@ -34,7 +34,7 @@ How to access prometheus - web ui
 --
 1) minikube ip
 2) prometheus server - port ( get from svc -- kubectl get svc )
-3) ``` http://http://192.168.39.30:31683/ (Example)
+3) ``` http://http://192.168.39.30:31683/ (Example) ```
 
 
 Installation of Grafana 
