@@ -7,7 +7,16 @@
 - Based on the information or report it will match with the alert manager runs
 - Based on the rules it will be giving alerts to the alert manager and if it matches the rule or exceed the threshold then an email will be triggered.
 
+NOTE : IF YOU WANT TO RESTART OR STOP AND START PROMETHEUS AFTER ADDING RULES THEN USE
+--
+``` pgrep prometheus ```
+- we will get a PID process id
+- kill <pid>
+- start the prometheus again
+- To run in backgroupd we can use ./prometheus &
 
+### REF LINK : ``` https://github.com/prometheus/blackbox_exporter ```
+- BLACK BOX EXPORTER
 
 ### Steps for Downloading, Extracting, and Starting Prometheus, Node Exporter, Blackbox Exporter, and Alertmanager
 
