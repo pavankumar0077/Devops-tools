@@ -1,0 +1,15 @@
+# file name shouled be - .gitlab-ci.yml
+
+stages:
+    - test
+
+test_job:
+    stage: test
+    tags:
+        - aws-ec2 # If you want use custom runner
+    before_script:
+        - echo "Setup done"
+    script:
+        - echo "Executing test cases"
+    after_script:
+        - echo "All Done"
