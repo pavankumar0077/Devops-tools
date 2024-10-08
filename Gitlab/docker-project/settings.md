@@ -17,3 +17,11 @@
 - TO RUN DOCKER IN THE CUSTOM RUNNER
 - Change privileged = true & volumes = ["/certs/client"]
 
+# To run docker command inside the docker container
+
+```
+default:
+  image: docker:latest
+  services: 
+    - docker:dind
+```

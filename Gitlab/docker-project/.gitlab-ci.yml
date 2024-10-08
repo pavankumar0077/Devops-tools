@@ -1,0 +1,22 @@
+stages:
+  - build
+
+default:
+  image: docker:latest
+  services: 
+    - docker:dind
+variables:
+  DOCKER_HOST: "tcp://docker:2375"
+  DOCKER_TLS_CERTDIR: ""
+
+build_docker_image:
+  stage: build
+  # tags:
+  #   - aws-ec2 # Custom Runner
+  before_script:
+    - docker version
+  script:
+    - echo "Building the project..."
+    - docker build -t mywebapp:$CI_PIPELINE_IID .
+    - docker image ls
+  
