@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "XqqZ5WI+C6Rm/2R2UmeEIjYg+KhV4Guur9f5VZZot1U=",
+  "Source": "NET-Core-Web-API-Docker-Demo",
+  "BasePath": "_content/NET-Core-Web-API-Docker-Demo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
